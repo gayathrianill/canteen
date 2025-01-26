@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add Google Font link for "Poppins" font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide images by default */
+        .slides {
+            display: none;
+        }
+
+        /* Add styles for images */
+        .slideshow-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Previous and next buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: rgb(22, 2, 2);
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Position the next button to the right */
+        .next {
+            right: 0;
+        }
+
+        /* Position the previous button to the left */
+        .prev {
+            left: 0;
+        }
+
+        /* Add hover effect on buttons */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Custom styling for the header (Welcome to the Canteen) */
+        h1 {
+            font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+            text-align: center;
+            margin-top: 50px;
+            font-size: 50px; /* Increase font size */
+            font-weight: 600; /* Bold font */
+            color: #11423c; /* Change color to a fresh green */
+            letter-spacing: 2px; /* Add space between letters */
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Add text shadow */
+            text-transform: uppercase; /* Make text uppercase */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Canteen</h1>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        
+        <!-- Slides -->
+        <div class="slides">
+            <img src="https://images.pexels.com/photos/2299028/pexels-photo-2299028.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Clear glass teacup with coffee beverage">
+         </div>
+        <div class="slides">
+            <img src="https://images.pexels.com/photos/14511758/pexels-photo-14511758.jpeg" alt="Close up shot of a cup of latte">
+          </div>
+        <div class="slides">
+            <img src="https://images.pexels.com/photos/5852329/pexels-photo-5852329.jpeg" alt="Healthy lunchbox with fruits and veggies">
+         </div>
+
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let slideIndex = 0; // Track the current slide index
+        showSlides();
+
+        // Function to show slides
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Move to the next slide
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+
+            // Show the current slide
+            slides[slideIndex - 1].style.display = "block";
+
+            // Change slide every 3 seconds
+            setTimeout(showSlides, 3000);
+        }
+
+        // Function for manual slide change (next/prev)
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex < 1) { slideIndex = slides.length }
+            showSlides();
+        }
+    </script>
+
+    <nav>
+        <a href="{{ url_for('menu_page') }}">View Menu</a>
+    </nav>
+
+</body>
+</html>

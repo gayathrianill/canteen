@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Your Cart</h1>
+    
+    <!-- Displaying the Image -->
+    <div class="cart-image">
+        <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg" alt="Delicious Hamburger">
+    </div>
+    
+    {% if cart_items %}
+        <ul>
+            {% for item in cart_items %}
+                <li>{{ item.name }} - ${{ item.price }} x {{ item.quantity }}</li>
+            {% endfor %}
+        </ul>
+        <p>Total: ${{ total }}</p>
+    {% else %}
+        <p>Your cart is empty!</p>
+    {% endif %}
+    
+    <a href="{{ url_for('checkout') }}">Checkout</a>
+    <a href="{{ url_for('menu_page') }}">Back to Menu</a>
+</body>
+</html>
