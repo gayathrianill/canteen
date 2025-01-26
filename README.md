@@ -1,29 +1,46 @@
 canteen
 
 Basic Details
+
 Team Name: Gayathri K.A
+
 Team Members
+
 Member 1: Gayathri K.A - sngce
+
 Hosted Project Link
 
 
+
 Project Description
+
 a canteen app for our collage sngce to order food.
 
+
 The Problem statement
+
 due to heavy rush in collage canteen , students are unable to place thier order even if they come on time
 
 The Solution
+
 i created a website for our collage canteen to order food . students can use that site inorder to avoide rush in the canteen and can save time
 
+
 Technical Details
+
 using chatgpt
+
 For Software:
 
+
 html
+
 flask
+
 chatgpt
+
 vscode
+
 
 
 Implementation
