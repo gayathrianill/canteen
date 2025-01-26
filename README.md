@@ -45,7 +45,11 @@ Screenshots (Add at least 3)
 ![Screenshot3](![chheh out](https://github.com/user-attachments/assets/f4d3906c-54e4-4b9b-a86c-fb7049ea92e9)
 
 video
-[125a069f-ef0d-4d1d-acb0-834504ae6ac9.webm](https://github.com/user-attachments/assets/d73bca4d-260e-4d0a-8945-b3cc270b663a)
+
+
+https://github.com/user-attachments/assets/52e20751-fb11-4a76-907d-22a6da413400
+
+
 
 
 Diagrams
